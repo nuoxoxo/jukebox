@@ -52,13 +52,17 @@ body {
 }
 
 #youtube-div {
-  display: flex;
-  img, iframe {
-    padding: 8px;
-  }
+  @include FlexBody();
+  // img, iframe {
+  //   margin: 8px;
+  // }
   img {
     width: $IMG-SIZE-ON-MEDIA-HALFMAC;
   }
+}
+
+#youtube-coverart {
+  align-self: center;
 }
 
 #youtube-iframe {
@@ -75,6 +79,8 @@ body {
 @media only screen and (max-width: 930px) {
   #youtube-div {
     @include FlexBody();
+    // padding-top: $TXT-SIZEX05;
+    margin-bottom: 10px;
     img {
       width: $IMG-SIZE-ON-MEDIA-HALFMAC;
     }
@@ -88,12 +94,6 @@ body {
 @media only screen and (max-width: 768px) {
 
   body { transform: scale(0.88); transform-origin: center center; }
-
-  #youtube-div {
-    @include FlexBody();
-    // padding-top: $TXT-SIZEX05;
-    padding-bottom: $TXT-SIZEX05;
-  }
 
   img {
     width: $IMG-SIZE-ON-MEDIA-MOBILE;

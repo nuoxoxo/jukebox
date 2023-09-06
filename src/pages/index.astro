@@ -66,8 +66,15 @@
 			SongART = Songs[SongURL]
 			SongToSet.src = 'https://www.youtube.com/embed/' + SongURL
 			CoverToSet.src = 'https://i.imgur.com/' + SongART
-
+			RandomButton.style.backgroundColor = RandomRGBString()
 		})
+
+		function RandomRGBString() {
+			let R = Math.floor(Math.random() * 256)
+			let G = Math.floor(Math.random() * 256)
+			let B = Math.floor(Math.random() * 256)
+			return "rgb(" + R + ", " + G + ", " + B + ")"
+		}
 	</script>
 	<style>
 		@import '../styles/index.scss'
