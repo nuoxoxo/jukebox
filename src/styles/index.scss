@@ -23,7 +23,7 @@ $SEC: 2s;
   border-radius: 50%;
   cursor: pointer;
   border: none;
-  padding: $TXT-SIZE;
+  margin: $TXT-SIZE;
   border: 2px solid random-rgb-color();
   // outline: none;
   background-color: transparent;//random-rgb-color();
