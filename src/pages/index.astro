@@ -56,7 +56,8 @@
 		// YoutubeDiv.appendChild(coverart)
 		YoutubeDiv.appendChild(iframe)
 
-		RandomButton.addEventListener('click', () => {
+		RandomButton.addEventListener('click', (e) => {
+			e.preventDefault()
 			const SongToSet = document.getElementById('youtube-iframe') as HTMLDivElement
 			const CoverToSet = document.getElementById('youtube-coverart') as HTMLButtonElement
 			SongURL = SongKeys[Math.floor(Math.random() * SongKeys.length)]
