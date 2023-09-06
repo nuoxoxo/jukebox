@@ -25,7 +25,7 @@ $SEC: 2s;
   border: none;
   padding: 10px;
   // outline: none;
-  // background-color: random-rgb-color();
+  background-color: transparent;//random-rgb-color();
   &:hover {
     border: 2px solid random-rgb-color();
     transition: border 0.3s ease;
