@@ -53,6 +53,7 @@ body {
 
 #youtube-div {
   @include FlexBody();
+  margin-bottom: 10px;
   // img, iframe {
   //   margin: 8px;
   // }
@@ -80,7 +81,7 @@ body {
   #youtube-div {
     @include FlexBody();
     // padding-top: $TXT-SIZEX05;
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
     img {
       width: $IMG-SIZE-ON-MEDIA-HALFMAC;
     }
