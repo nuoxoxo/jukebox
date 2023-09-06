@@ -69,25 +69,27 @@ body {
   @include ButtonStyle();
 }
 
-@media only screen and (max-width: 930px) {
-  #youtube-div {
-    @include FlexBody();
-    img {
-      width: $IMG-SIZE-ON-MEDIA-HALFMAC;
-    }
-  }
-  #youtube-iframe {
-    height: $IMG-SIZE-ON-MEDIA-HALFMAC;
-    width: $IMG-SIZE-ON-MEDIA-HALFMAC;
-  }
-}
+// @media only screen and (max-width: 930px) {
+//   #youtube-div {
+//     @include FlexBody();
+//     img {
+//       width: $IMG-SIZE-ON-MEDIA-HALFMAC;
+//     }
+//   }
+//   #youtube-iframe {
+//     height: $IMG-SIZE-ON-MEDIA-HALFMAC;
+//     width: $IMG-SIZE-ON-MEDIA-HALFMAC;
+//   }
+// }
 
 @media only screen and (max-width: 768px) {
   #youtube-div {
+    @include FlexBody();
     img {
       width: $IMG-SIZE-ON-MEDIA-MOBILE;
     }
   }
+
   #youtube-iframe {
     height: $IMG-SIZE-ON-MEDIA-MOBILE;
     width: $IMG-SIZE-ON-MEDIA-MOBILE;
