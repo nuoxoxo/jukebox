@@ -49,10 +49,6 @@ body {
   // @include GridBody();
   @include FlexBody(); 
 
-
-  transform: scale(0.88);
-  transform-origin: top left;
-
 }
 
 #youtube-div {
@@ -90,6 +86,9 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+
+  body { transform: scale(0.88); transform-origin: top left; }
+
   #youtube-div {
     @include FlexBody();
     // padding-top: $TXT-SIZEX05;
