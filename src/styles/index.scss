@@ -1,6 +1,6 @@
 $GB: #000000;
 $TXT: #ffffff;
-$IMG-SIZE-ON-MEDIA-MOBILE: 150px;
+$IMG-SIZE-ON-MEDIA-MOBILE: 42px;
 $IMG-SIZE-ON-MEDIA-HALFMAC: 300px;
 $TXT-SIZE: 42px;
 $TXT-SIZEX05: calc($TXT-SIZE / 2);
@@ -25,7 +25,7 @@ $SEC: 2s;
   background-color: random-rgb-color();
   &:hover {
     border: 2px solid random-rgb-color();
-    transition: border 0.3s ease-in-out;
+    transition: border 0.3s ease;
   }
 }
 
