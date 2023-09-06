@@ -45,6 +45,8 @@ $SEC: 2s;
 body {
   background-color: $GB;
   color: $TXT;
+  padding:0;
+  margin:0;
   font-size: $TXT-SIZE;
   // @include GridBody();
   @include FlexBody(); 
