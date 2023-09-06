@@ -1,7 +1,7 @@
 $GB: #000000;
 $TXT: #ffffff;
 $IMG-SIZE-ON-MEDIA-MOBILE: 88px;
-$IMG-SIZE-ON-MEDIA-HALFMAC: 300px;
+$IMG-SIZE-ON-MEDIA-HALFMAC: 200px;
 $IMG-SIZE-ON-MEDIA-FULLMAC: 400px;
 $TXT-SIZE: 42px;
 $TXT-SIZEX05: calc($TXT-SIZE / 2);
@@ -55,7 +55,7 @@ body {
     padding: 8px;
   }
   img {
-    width: $IMG-SIZE-ON-MEDIA-FULLMAC;
+    width: $IMG-SIZE-ON-MEDIA-HALFMAC;
   }
 }
 
@@ -86,8 +86,8 @@ body {
 @media only screen and (max-width: 768px) {
   #youtube-div {
     @include FlexBody();
-    padding-top: $TXT-SIZEX2;
-    padding-bottom: $TXT-SIZEX2;
+    padding-top: $TXT-SIZEX;
+    padding-bottom: $TXT-SIZEX;
   }
 
   img {
