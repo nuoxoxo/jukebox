@@ -86,9 +86,10 @@ body {
 @media only screen and (max-width: 768px) {
   #youtube-div {
     @include FlexBody();
-    img {
-      width: $IMG-SIZE-ON-MEDIA-MOBILE;
-    }
+  }
+
+  img {
+    width: $IMG-SIZE-ON-MEDIA-MOBILE;
   }
 
   #youtube-iframe {
