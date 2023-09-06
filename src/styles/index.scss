@@ -6,6 +6,14 @@ $TXT-SIZE: 42px;
 $TXT-SIZEX05: calc($TXT-SIZE / 2);
 $TXT-SIZEX2: calc($TXT-SIZE * 2);
 $TXT-SIZEX3: calc($TXT-SIZE * 3);
+$SEC: 2s;
+
+@function random-rgb-color() {
+  $R: random(255);
+  $G: random(255);
+  $B: random(255);
+  @return rgb($R, $G, $B);
+}
 
 @mixin ButtonStyle {
   width: $TXT-SIZEX3;
@@ -14,6 +22,11 @@ $TXT-SIZEX3: calc($TXT-SIZE * 3);
   cursor: pointer;
   border: none;
   // outline: none;
+  background-color: random-rgb-color();
+  &:hover {
+    border: 2px solid random-rgb-color();
+    transition: border 0.3s ease-in-out;
+  }
 }
 
 @mixin FlexBody {
@@ -37,6 +50,9 @@ body {
 }
 
 #youtube-div {
+  img, iframe {
+    padding: 10px;
+  }
   img {
     width: 400px;
   }
