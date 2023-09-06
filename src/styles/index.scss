@@ -1,6 +1,6 @@
 $GB: #000000;
 $TXT: #ffffff;
-$IMG-SIZE-ON-MEDIA-MOBILE: 42px;
+$IMG-SIZE-ON-MEDIA-MOBILE: 150px;
 $IMG-SIZE-ON-MEDIA-HALFMAC: 300px;
 $TXT-SIZE: 42px;
 $TXT-SIZEX05: calc($TXT-SIZE / 2);
@@ -83,8 +83,10 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  #youtube-coverart {
-    width: $IMG-SIZE-ON-MEDIA-MOBILE;
+  #youtube-div {
+    img {
+      width: $IMG-SIZE-ON-MEDIA-MOBILE;
+    }
   }
   #youtube-iframe {
     height: $IMG-SIZE-ON-MEDIA-MOBILE;
