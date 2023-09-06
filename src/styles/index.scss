@@ -86,8 +86,8 @@ body {
 @media only screen and (max-width: 768px) {
   #youtube-div {
     @include FlexBody();
-    padding-top: $TXT-SIZEX;
-    padding-bottom: $TXT-SIZEX;
+    padding-top: $TXT-SIZE;
+    padding-bottom: $TXT-SIZE;
   }
 
   img {
