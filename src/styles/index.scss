@@ -2,6 +2,7 @@ $GB: #000000;
 $TXT: #ffffff;
 $IMG-SIZE-ON-MEDIA-MOBILE: 88px;
 $IMG-SIZE-ON-MEDIA-HALFMAC: 300px;
+$IMG-SIZE-ON-MEDIA-FULLMAC: 400px;
 $TXT-SIZE: 42px;
 $TXT-SIZEX05: calc($TXT-SIZE / 2);
 $TXT-SIZEX2: calc($TXT-SIZE * 2);
@@ -54,7 +55,7 @@ body {
     padding: 8px;
   }
   img {
-    width: 400px;
+    width: $IMG-SIZE-ON-MEDIA-FULLMAC;
   }
 }
 
