@@ -51,6 +51,7 @@ body {
 }
 
 #youtube-div {
+  display: flex;
   img, iframe {
     padding: 8px;
   }
