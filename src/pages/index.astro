@@ -4,9 +4,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>¡La Canción!</title>
 	</head>
 	<body>
@@ -67,14 +67,14 @@
 		iframe.id = 'youtube-iframe'
 		iframe.src = 'https://www.youtube.com/embed/' + SongURL
 		iframe.frameborder = '0'
-		iframe.allow = 'accelerometer autoplay clipboard-write encrypted-media gyroscope picture-in-picture web-share'
+		iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
 		iframe.allowfullscreen = true
 
 		const coverart = document.createElement('img')
 		coverart.id = 'youtube-coverart'
 		coverart.src = 'https://i.imgur.com/' + SongART + '.jpg'
 		coverart.style =
-			'display: blockwidth:autoheight:302pxmargin-bottom:21px'
+			'display:block; width:auto; height:302px; margin-bottom:21px; '
 
 		YoutubeDiv.appendChild(coverart)
 		YoutubeDiv.appendChild(iframe)
