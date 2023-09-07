@@ -10,7 +10,7 @@ $TXT-SIZEX05: calc($TXT-SIZE / 2);
 $TXT-SIZEX2: calc($TXT-SIZE * 2);
 $TXT-SIZEX3: calc($TXT-SIZE * 3);
 
-$BTN-SIZE: 66px;
+$BTN-SIZE: 69px;
 $BTN-MARGIN: 11px;
 
 $SEC: 2s;
@@ -29,11 +29,11 @@ $SEC: 2s;
   cursor: pointer;
   border: none;
   margin: $BTN-MARGIN;
-  border: 2px solid random-rgb-color();
+  border: 3px solid random-rgb-color();
   // outline: none;
   background-color: transparent;//random-rgb-color();
   &:hover {
-    border: 4px solid random-rgb-color();
+    border: 5px solid random-rgb-color();
     transition: border 0.3s ease;
   }
 }
