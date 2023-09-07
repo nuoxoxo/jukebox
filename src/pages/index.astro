@@ -34,7 +34,7 @@
 
 		const stuffFromLocalStorage = localStorage.getItem('choiceURL')
 		const choice = stuffFromLocalStorage ? 
-			Number(stuffFromLocalStorage) : choiceIndexInfileURLs
+		Number(stuffFromLocalStorage) : choiceIndexInfileURLs
 		const infileURL = infileURLs[choice]
 
 		// const infileURL = 'https://raw.githubusercontent.com/nuoxoxo/in/main/canciones_edition_jazz.in'
@@ -102,7 +102,10 @@
 		})
 
 		RandomButton.addEventListener('click', (e) => {
-    e.preventDefault()
+				e.preventDefault()
+				choice = (choice + 1) % infileURLs.length
+				infileURL = infileURLs[choice]
+				localStorage.setItem('choiceURL', choice.toString())
 		})
 
 		function RandomRGBString() {
