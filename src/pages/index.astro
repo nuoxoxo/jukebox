@@ -14,6 +14,8 @@
     <div id="youtube-div"></div>
     <div id="btn-div">
       <button id="btn-switch" class="btn"></button>
+      <button id="btn-back" class="btn"></button>
+      <button id="btn-forward" class="btn"></button>
       <button id="btn-random" class="btn"></button>
     </div>
   </body>
@@ -120,6 +122,38 @@
       let B = Math.floor(Math.random() * 256)
       return "rgb(" + R + ", " + G + ", " + B + ")"
     }
+
+    const ForwButton = document.getElementById("btn-forward") as HTMLButtonElement
+    ForwButton.addEventListener("click", (e) => {
+      e.preventDefault()
+      e.preventDefault()
+      const SongToSet = document.getElementById("youtube-iframe")
+      const CoverToSet = document.getElementById("youtube-coverart")
+      const IndexToSet = (SongKeys.indexOf(SongItem) + 1) % SongKeys.length
+
+      SongItem = Songs[SongKeys[IndexToSet]]
+      SongURL = SongItem["tube"]
+      SongART = SongItem["cover"]
+      SongToSet.src = "https://www.youtube.com/embed/" + SongURL
+      CoverToSet.src = "https://i.imgur.com/" + SongART + ".jpg"
+    })
+
+    
+    const BackhButton = document.getElementById("btn-back") as HTMLButtonElement
+    BackhButton.addEventListener("click", (e) => {
+      e.preventDefault()
+      const SongToSet = document.getElementById("youtube-iframe")
+      const CoverToSet = document.getElementById("youtube-coverart")
+      const IndexToSet = (SongKeys.indexOf(SongItem) - 1) % SongKeys.length
+
+      SongItem = Songs[SongKeys[IndexToSet]]
+      SongURL = SongItem["tube"]
+      SongART = SongItem["cover"]
+      SongToSet.src = "https://www.youtube.com/embed/" + SongURL
+      CoverToSet.src = "https://i.imgur.com/" + SongART + ".jpg"
+    })
+
+
   </script>
   <style>
     @import "../styles/index.scss"
