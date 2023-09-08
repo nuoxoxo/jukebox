@@ -88,6 +88,10 @@ body {
   @include ButtonStyle();
 }
 
+#switch-btn {
+  display:bone;
+}
+
 @media only screen and (max-width: 930px) {
   #youtube-div {
     @include FlexBody();
