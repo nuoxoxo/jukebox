@@ -104,8 +104,10 @@
         const CoverToSet = document.getElementById("youtube-coverart")
 
         Songs = await FetchData(InfileURL)
+
         SongKeys = Object.keys(Songs)
-        SongItem = Songs[SongKeys[Math.floor(Math.random() * SongKeys.length)]]
+        SongKey = SongKeys[Math.floor(Math.random() * SongKeys.length)]
+        SongItem = Songs[SongKey]
         SongURL = SongItem["tube"]
         SongART = SongItem["cover"]
 
