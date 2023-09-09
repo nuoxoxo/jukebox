@@ -105,6 +105,9 @@ body {
     height: $IMG-SIZE-ON-MEDIA-HALFMAC;
     width: $IMG-SIZE-ON-MEDIA-HALFMAC;
   }
+  #youtube-coverart {
+    height: 306px
+  }
 }
 
 @media only screen and (max-width: 768px) {
