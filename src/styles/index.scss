@@ -34,7 +34,8 @@ $SEC: 2s;
   // outline: none;
   background-color: transparent;
   &:hover {
-    border: 2px solid random-rgb-color();
+    // border: 2px solid random-rgb-color();
+    border: 2px solid tomato;
     transition: border 0.3s ease-in-out;
   }
 }
