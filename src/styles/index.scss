@@ -18,7 +18,7 @@ $SEC: 2s;
 
 @mixin animation-rainbow-rotate {
 
-  color: random-rgb-color();
+  border-color: random-rgb-color();
   animation: rainbow-rotate 5s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -38,7 +38,8 @@ $SEC: 2s;
   cursor: pointer;
   border: none;
   margin: $BTN-MARGIN;
-  border: 3px solid random-rgb-color();
+  border: 3px solid;
+  @animation-rainbow-rotate;
   // outline: none;
   background-color: transparent;
   &:hover {
@@ -61,7 +62,7 @@ $SEC: 2s;
 }
 
 body {
-  background-color: $GB;
+  // background-color: $GB;
   color: $TXT;
   padding:0;
   margin:0;
