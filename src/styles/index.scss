@@ -18,7 +18,7 @@ $SEC: 2s;
 
 @mixin animation-rainbow-rotate {
 
-  border-color: random-rgb-color();
+  background-color: random-rgb-color();
   animation: rainbow-rotate 5s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
