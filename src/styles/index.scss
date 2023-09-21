@@ -49,7 +49,7 @@ $SEC: 2s;
   cursor: pointer;
   border: none;
   margin: $BTN-MARGIN;
-  border: 2px solid;
+  border: none;//2px solid;
   @include animation-rainbow-rotate();
   // background-color: transparent;
 
