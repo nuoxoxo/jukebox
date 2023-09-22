@@ -11,7 +11,7 @@ $TXT-SIZEX2: calc($TXT-SIZE * 2);
 $TXT-SIZEX3: calc($TXT-SIZE * 3);
 
 $BTN-SIZE-FULL: 60px;
-$BTN-SIZE-MOBILE: 58px;
+$BTN-SIZE-MOBILE: 60px;
 $BTN-MARGIN: 7px;
 
 $SEC: 2s;
@@ -49,7 +49,7 @@ $SEC: 2s;
   cursor: pointer;
   border: none;
   margin: $BTN-MARGIN;
-  margin-top: 10px;
+  margin-top: 8px;
   border: none;//2px solid;
   @include animation-rainbow-rotate();
   // background-color: transparent;
