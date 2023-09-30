@@ -27,7 +27,8 @@
     const InfileURLs = [
       'https://raw.githubusercontent.com/nuoxoxo/in/main/canciones_edition_jazz.json',
       'https://raw.githubusercontent.com/nuoxoxo/in/main/canciones.json',
-      // 'https://raw.githubusercontent.com/nuoxoxo/in/main/limited_edition_01.json'
+      // 'https://raw.githubusercontent.com/nuoxoxo/in/main/limited_edition_02.in'
+      // 'https://raw.githubusercontent.com/nuoxoxo/in/main/limited_edition_01.in'
     ]
 
     const choiceMath: number = Math.floor(Math.random() * InfileURLs.length)
@@ -41,7 +42,7 @@
 
     let InfileURL: string = InfileURLs[choice]
 
-    const FetchData = async (url) => {
+    const FetchData = async (url: string) => {
       try {
         const response = await fetch(url)
         const data = await response.json()
@@ -50,6 +51,11 @@
         console.error("Error fetching data: ", error)
         throw error
       }
+    }
+
+    const ConstructURL(url: string) => {
+      return
+      `https://www.youtube.com/embed/${url}?playlist=${url}&autoplay=1&loop=1&controls=0`
     }
 
     let Songs = await FetchData(InfileURL)
@@ -64,11 +70,11 @@
     const iframe = document.createElement("iframe")
     iframe.id = "youtube-iframe"
     iframe.frameborder = "0"
+
     iframe.allow = 'autoplay'
-      // "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    iframe.src = `https://www.youtube.com/embed/${SongURL}?controls=0&autoplay=1&loop=1&playlist=${SongURL}`
-    // iframe.allowfullscreen = true
-    // iframe.loop = "1" // no use
+    // iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"    
+    iframe.src = ConstructURL(SongURL)
+    // iframe.src = `https://www.youtube.com/embed/${SongURL}?playlist=${SongURL}&autoplay=1&loop=1&controls=0`
 
     const coverart = document.createElement("img")
     coverart.id = "youtube-coverart"
@@ -88,8 +94,7 @@
       SongItem = Songs[SongKeys[Math.floor(Math.random() * SongKeys.length)]]
       SongURL = SongItem["tube"]
       SongART = SongItem["cover"]
-      SongToSet.src = `https://www.youtube.com/embed/${SongURL}?controls=0&autoplay=1&loop=1&playlist=${SongURL}`
-        //+ 'autoplay=1&loop=1&playlist=' + SongURL // it's how loop works
+      SongToSet.src = ConstructURL(SongURL)//`https://www.youtube.com/embed/${SongURL}?playlist=${SongURL}&autoplay=1&loop=1&controls=0`
       CoverToSet.src = "https://i.imgur.com/" + SongART + ".jpg"
     })
 
@@ -113,7 +118,7 @@
         SongURL = SongItem["tube"]
         SongART = SongItem["cover"]
 
-        SongToSet.src = `https://www.youtube.com/embed/${SongURL}?controls=0&autoplay=1&loop=1&playlist=${SongURL}`
+        SongToSet.src = ConstructURL(SongURL)//`https://www.youtube.com/embed/${SongURL}?playlist=${SongURL}&autoplay=1&loop=1&controls=0`
         CoverToSet.src = "https://i.imgur.com/" + SongART + ".jpg"
         localStorage.setItem("choiceURL", ChoiceNEW.toString())
       } catch (error) {
@@ -154,7 +159,7 @@
         SongURL = SongItem["tube"]
         SongART = SongItem["cover"]
 
-        SongToSet.src = `https://www.youtube.com/embed/${SongURL}?controls=0&autoplay=1&loop=1&playlist=${SongURL}`
+        SongToSet.src = ConstructURL(SongURL)//`https://www.youtube.com/embed/${SongURL}?playlist=${SongURL}&autoplay=1&loop=1&controls=0`
         CoverToSet.src = "https://i.imgur.com/" + SongART + ".jpg"
       } catch (error) {
         console.error("Error handling switch button: ", error)
@@ -184,13 +189,12 @@
         SongURL = SongItem["tube"]
         SongART = SongItem["cover"]
 
-        SongToSet.src = `https://www.youtube.com/embed/${SongURL}?controls=0&autoplay=1&loop=1&playlist=${SongURL}`
+        SongToSet.src = ConstructURL(SongURL)//`https://www.youtube.com/embed/${SongURL}?playlist=${SongURL}&autoplay=1&loop=1&controls=0`
         CoverToSet.src = "https://i.imgur.com/" + SongART + ".jpg"
       } catch (error) {
         console.error("Error handling switch button: ", error)
       }
     })
-
 
   </script>
   <style>
