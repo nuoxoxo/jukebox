@@ -67,9 +67,6 @@
     iframe.allow =
       "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     iframe.src = `https://www.youtube.com/embed/${SongURL}?controls=0&autoplay=1&loop=1&playlist=${SongURL}`
-      // + 'autoplay=1&loop=1&playlist=' + SongURL // it's how loop works
-    // iframe.allowfullscreen = true
-    // iframe.loop = "1" // no use
 
     const coverart = document.createElement("img")
     coverart.id = "youtube-coverart"
@@ -90,7 +87,6 @@
       SongURL = SongItem["tube"]
       SongART = SongItem["cover"]
       SongToSet.src = `https://www.youtube.com/embed/${SongURL}?controls=0&autoplay=1&loop=1&playlist=${SongURL}`
-        //+ 'autoplay=1&loop=1&playlist=' + SongURL // it's how loop works
       CoverToSet.src = "https://i.imgur.com/" + SongART + ".jpg"
     })
 
@@ -191,7 +187,6 @@
         console.error("Error handling switch button: ", error)
       }
     })
-
 
   </script>
   <style>
