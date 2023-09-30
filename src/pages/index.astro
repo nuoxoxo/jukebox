@@ -54,7 +54,7 @@
     }
 
     const ConstructURL:string = (url: string) => {
-      return 'https://www.youtube.com/embed/' + url + 'playlist=' + url + '&autoplay=1&loop=1&controls=0'
+      return 'https://www.youtube.com/embed/' + url + '?playlist=' + url + '&autoplay=1&loop=1&controls=0'
     }
 
     let Songs = await FetchData(InfileURL)
