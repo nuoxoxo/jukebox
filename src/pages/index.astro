@@ -70,8 +70,9 @@
     const iframe = document.createElement("iframe")
     iframe.id = "youtube-iframe"
     iframe.frameborder = "0"
-    iframe.allow =
-      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+
+    iframe.allow = 'autoplay'
+    // iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"    
     iframe.src = ConstructURL(SongURL)
     // iframe.src = `https://www.youtube.com/embed/${SongURL}?playlist=${SongURL}&autoplay=1&loop=1&controls=0`
 
