@@ -23,6 +23,11 @@
     const YoutubeDiv = document.getElementById("youtube-div") as HTMLDivElement
     const RandomButton = document.getElementById("btn-random") as HTMLButtonElement
     const SwitchButton = document.getElementById("btn-switch") as HTMLButtonElement
+    let SongKeys:string[] = []
+    let SongKey:string
+    let SongItem:Record<string, any>
+    let SongURL:string
+    let SongART:string
 
     const InfileURLs = [
       'https://raw.githubusercontent.com/nuoxoxo/in/main/canciones_edition_jazz.json',
@@ -57,21 +62,34 @@
       return 'https://www.youtube.com/embed/' + url + '?playlist=' + url + '&autoplay=1&loop=1&controls=0'
     }
 
+    const ShuffleArray = arr => {
+      let i = -1
+      while (++i < arr.length - 1) {
+          const j = Math.floor(Math.random() * (i + 1))
+          const temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+      }
+      return arr
+    }
+
     let Songs = await FetchData(InfileURL)
 
-    let SongKeys = Object.keys(Songs)
-    let SongKey = SongKeys[Math.floor(Math.random() * SongKeys.length)]
-    let SongItem = Songs[SongKey]
+    SongKeys = ShuffleArray(Object.keys(Songs))
+    SongKey = SongKeys[Math.floor(Math.random() * SongKeys.length)]
+    SongItem = Songs[SongKey]
 
-    let SongURL = SongItem["tube"]
-    let SongART = SongItem["cover"]
+    SongURL = SongItem["tube"]
+    SongART = SongItem["cover"]
 
     const iframe = document.createElement("iframe")
+
     iframe.id = "youtube-iframe"
     iframe.frameborder = "0"
 
     iframe.allow = 'autoplay'
     // iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"    
+
     iframe.src = ConstructURL(SongURL)
     // iframe.src = `https://www.youtube.com/embed/${SongURL}?playlist=${SongURL}&autoplay=1&loop=1&controls=0`
 
@@ -111,7 +129,8 @@
 
         Songs = await FetchData(InfileURL)
 
-        SongKeys = Object.keys(Songs)
+        // SongKeys = Object.keys(Songs)
+        SongKeys = ShuffleArray(Object.keys(Songs))
         SongKey = SongKeys[Math.floor(Math.random() * SongKeys.length)]
         SongItem = Songs[SongKey]
         SongURL = SongItem["tube"]
