@@ -42,6 +42,9 @@
 
     //	To Use in Post Production (1/2)
     let choice:number = choiceStringLS ? Number(choiceStringLS) : choiceMath
+    if (choice > InfileURLs.length - 1) {
+      choice = choiceMath
+    }
 
     //	Test Used for Pre-Production (2/2)
     // let choice = 0
